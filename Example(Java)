@@ -1,0 +1,28 @@
+import java.util.Random;
+
+public class ArrayCasuale  {
+
+    public static void main(String[] args) {
+        int dimensione = 50;
+        double[] arrayCasuale = new double[dimensione];
+        Random random = new Random();
+
+        for (int i = 0; i < dimensione; i++) {
+            arrayCasuale[i] = random.nextInt(10000);
+        }
+
+        // Stampa dell'array per verifica
+        for (double numero : arrayCasuale) {
+            System.out.print(numero + " ");
+        }
+
+        System.out.println();
+        System.out.println("Array ordinato:");
+
+        SortingAlgorithms.MergeSort(arrayCasuale);
+        for (double numero : arrayCasuale) {
+            System.out.print(numero + " ");
+        }
+
+    }
+}
